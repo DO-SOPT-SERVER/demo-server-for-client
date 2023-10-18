@@ -26,6 +26,12 @@ dependencies {
     // security
     implementation("org.springframework.boot:spring-boot-starter-security")
 
+    // mustache
+    implementation("org.springframework.boot:spring-boot-starter-mustache")
+
+    // swagger
+    implementation("org.springdoc:springdoc-openapi-ui:1.5.12")
+
     implementation("org.springframework.boot:spring-boot-starter-data-jpa")
     implementation("org.springframework.boot:spring-boot-starter-web")
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin")

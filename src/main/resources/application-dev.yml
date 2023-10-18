@@ -10,3 +10,6 @@ spring:
   config:
     activate:
       on-profile: dev
+  web:
+    resources:
+      static-locations: classpath:/static/
