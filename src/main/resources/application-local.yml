@@ -13,3 +13,15 @@ spring:
       hibernate:
         format_sql: true
         show_sql: true
+
+springdoc:
+  packages-to-scan: com.example.demoserver
+  default-consumes-media-type: application/json;charset=UTF-8
+  default-produces-media-type: application/json;charset=UTF-8
+  swagger-ui:
+    tags-sorter: alpha
+    operations-sorter: alpha
+  api-docs:
+    path: /api-docs/json
+    groups:
+      enabled: true

@@ -29,8 +29,14 @@ dependencies {
     // mustache
     implementation("org.springframework.boot:spring-boot-starter-mustache")
 
+//    implementation("org.springframework.boot:spring-boot-starter-actuator")
+//    implementation("io.micrometer:micrometer-registry-prometheus")
+//    implementation("io.micrometer:micrometer-core")
+
     // swagger
-    implementation("org.springdoc:springdoc-openapi-ui:1.5.12")
+    val springDocVersion = "2.1.0"
+    implementation("org.springdoc:springdoc-openapi-starter-webmvc-ui:$springDocVersion")
+    implementation("org.springdoc:springdoc-openapi-starter-common:$springDocVersion")
 
     implementation("org.springframework.boot:spring-boot-starter-data-jpa")
     implementation("org.springframework.boot:spring-boot-starter-web")
@@ -41,6 +47,8 @@ dependencies {
     runtimeOnly("org.mariadb.jdbc:mariadb-java-client")
     runtimeOnly("org.postgresql:postgresql")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
+
+
 }
 
 tasks.withType<KotlinCompile> {
