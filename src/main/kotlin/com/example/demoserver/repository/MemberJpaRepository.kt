@@ -8,4 +8,5 @@ interface MemberJpaRepository : JpaRepository<MemberEntity, Long> {
     fun findByUsername(username: String): MemberEntity?
 
     fun existsByUsername(username: String): Boolean
+
 }
