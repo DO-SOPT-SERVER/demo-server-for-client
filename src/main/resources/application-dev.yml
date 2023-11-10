@@ -9,10 +9,11 @@ spring:
       hibernate:
         dialect: org.hibernate.dialect.MySQLDialect
     hibernate:
-      ddl-auto: update
+      ddl-auto: none
   config:
     activate:
       on-profile: dev
+    import: application-SECRET-properties
   web:
     resources:
       static-locations: classpath:/static/

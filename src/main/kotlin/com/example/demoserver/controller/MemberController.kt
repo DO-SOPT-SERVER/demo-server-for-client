@@ -49,9 +49,9 @@ class MemberController(
         ]
     )
     @PostMapping("/sign-in")
-    fun signIn(@RequestBody request: MemberSignInRequest): ResponseEntity<Unit> {
-        memberService.signIn(request)
-        return ResponseEntity.noContent().build()
+    fun signIn(@RequestBody request: MemberSignInRequest): ResponseEntity<MemberService.MemberSignInResponse> {
+        val response:MemberService.MemberSignInResponse = memberService.signIn(request)
+        return ResponseEntity.ok(response)
     }
 
     data class MemberSignInRequest(

@@ -40,15 +40,22 @@ class MemberService(
         return savedMember.id.toString()
     }
 
-    fun signIn(request: MemberController.MemberSignInRequest) {
+    fun signIn(request: MemberController.MemberSignInRequest): MemberSignInResponse {
         val member: MemberEntity = memberJpaRepository.findByUsername(request.username)
             ?: throw IllegalArgumentException("사용자가 존재하지 않습니다.")
         if (!encoder.matches(request.password, member.password)) {
             throw IllegalArgumentException("비밀번호가 일치하지 않습니다.")
         }
+
+        return MemberSignInResponse(
+            id = member.id!!,
+            username = member.username,
+            nickname = member.nickname
+        )
     }
 
     data class MemberSignInResponse(
+        val id : Long,
         val username: String,
         val nickname: String
     ) {
