@@ -62,4 +62,8 @@ class MemberService(
 
     }
 
+    fun checkExistUsername(username: String): Boolean {
+        return memberJpaRepository.existsByUsername(username)
+    }
+
 }
