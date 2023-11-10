@@ -76,7 +76,7 @@ class MemberController(
     @Operation(summary = "로그인 API")
     @ApiResponses(
         value = [
-            ApiResponse(responseCode = "204", description = "로그인 성공"),
+            ApiResponse(responseCode = "200", description = "로그인 성공"),
             ApiResponse(responseCode = "400", description = "로그아웃 실패", content = [Content(schema = Schema(implementation = Nothing::class))])
         ]
     )
@@ -98,8 +98,8 @@ class MemberController(
     @Operation(summary = "회원 정보 조회 API")
     @ApiResponses(
         value = [
-            ApiResponse(responseCode = "200", description = "회원가입 성공"),
-            ApiResponse(responseCode = "404", description = "회원가입 실패" , content = [Content(schema = Schema(implementation = Nothing::class))])
+            ApiResponse(responseCode = "200", description = "회원 정보 조회 성공"),
+            ApiResponse(responseCode = "404", description = "회원 정보 조회 실패" , content = [Content(schema = Schema(implementation = Nothing::class))])
         ]
     )
     @GetMapping("/{memberId}"
