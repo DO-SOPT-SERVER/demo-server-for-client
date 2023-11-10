@@ -77,7 +77,7 @@ class MemberController(
     @ApiResponses(
         value = [
             ApiResponse(responseCode = "200", description = "로그인 성공"),
-            ApiResponse(responseCode = "400", description = "로그아웃 실패", content = [Content(schema = Schema(implementation = Nothing::class))])
+            ApiResponse(responseCode = "400", description = "로그인 실패", content = [Content(schema = Schema(implementation = Nothing::class))])
         ]
     )
     @PostMapping("/sign-in")
