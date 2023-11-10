@@ -4,6 +4,7 @@ import com.example.demoserver.controller.MemberController
 import com.example.demoserver.controller.MemberController.MemberGetResponse
 import com.example.demoserver.entity.MemberEntity
 import com.example.demoserver.repository.MemberJpaRepository
+import io.swagger.v3.oas.annotations.media.Schema
 import jakarta.persistence.EntityNotFoundException
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder
 import org.springframework.security.crypto.password.PasswordEncoder
@@ -55,8 +56,11 @@ class MemberService(
     }
 
     data class MemberSignInResponse(
+        @Schema(example = "1", description = "사용자 id")
         val id : Long,
+        @Schema(example = "unanchoi")
         val username: String,
+        @Schema(example = "아슈파")
         val nickname: String
     ) {
 
