@@ -1,3 +1,8 @@
+server:
+  servlet:
+    encoding:
+      force-response: true
+
 spring:
   datasource:
     driver-class-name: org.h2.Driver
@@ -8,11 +13,22 @@ spring:
   jpa:
     show-sql: true
     hibernate:
+      dialect: org.hibernate.dialect.H2Dialect
       ddl-auto: create
     properties:
       hibernate:
         format_sql: true
         show_sql: true
+
+    defer-datasource-initialization: true
+
+  sql:
+    init:
+      mode: always
+      encoding: utf-8
+
+
+
 
 springdoc:
   packages-to-scan: com.example.demoserver

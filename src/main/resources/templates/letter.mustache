@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> Server </title>
+
+    <style>
+        body {
+            margin: 10vh;
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .member-name {
+            margin-bottom: 20px;
+        }
+
+        .letter-content {
+            width: 300px;
+            height: 600px;
+            border: 1px solid black;
+            padding: 20px;
+            overflow: scroll;
+        }
+
+        img {
+            width: 300px;
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+            <div class="member-name">
+                DO SOPT Server.. {{letter.name}}에게
+            </div>
+            <div class="letter-content">
+                {{letter.content}}
+            </div>
+</body>
+</html>
