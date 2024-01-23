@@ -1,2 +1,0 @@
-INSERT INTO LETTER(ID, NAME, CODE, CONTENT)
-VALUES (1,'unan', 'ABC', 'ㅎㅇ,');
